@@ -1,0 +1,345 @@
+-- phpMyAdmin SQL Dump
+-- version 4.5.4.1
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: 05-Dez-2024 às 21:54
+-- Versão do servidor: 5.7.11
+-- PHP Version: 7.0.3
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `bd_clinica`
+--
+CREATE DATABASE IF NOT EXISTS `bd_clinica` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `bd_clinica`;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tb_clientes`
+--
+
+CREATE TABLE `tb_clientes` (
+  `cpf_cliente` bigint(20) NOT NULL,
+  `nome_cliente` varchar(100) NOT NULL,
+  `data_nascimento` date NOT NULL,
+  `celular_cliente` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `tb_clientes`
+--
+
+INSERT INTO `tb_clientes` (`cpf_cliente`, `nome_cliente`, `data_nascimento`, `celular_cliente`) VALUES
+(9809809811, 'José Gomes Silva', '2005-11-02', '(81)99525-1126'),
+(22222222222, 'Maria da Silva', '2018-11-12', '(91)88888-8888'),
+(43955578922, 'Maria Gomes', '1980-07-21', '(81)98721-2876');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tb_usuarios`
+--
+
+CREATE TABLE `tb_usuarios` (
+  `id_usuario` int(11) NOT NULL,
+  `login_usuario` varchar(30) NOT NULL,
+  `senha_usuario` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `tb_usuarios`
+--
+
+INSERT INTO `tb_usuarios` (`id_usuario`, `login_usuario`, `senha_usuario`) VALUES
+(2, 'fabio', '1234'),
+(3, 'jose', '1234'),
+(4, 'maria', '1234'),
+(5, 'admin', '1234'),
+(6, 'usuario1', 'senha123'),
+(7, 'usuario2', 'senha234'),
+(8, 'usuario3', 'senha345'),
+(9, 'usuario4', 'senha456'),
+(10, 'usuario5', 'senha567'),
+(11, 'usuario6', 'senha678'),
+(12, 'usuario7', 'senha789'),
+(13, 'usuario8', 'senha890'),
+(14, 'usuario9', 'senha901'),
+(15, 'usuario10', 'senha012'),
+(16, 'usuario11', 'senha123'),
+(17, 'usuario12', 'senha234'),
+(18, 'usuario13', 'senha345'),
+(19, 'usuario14', 'senha456'),
+(20, 'usuario15', 'senha567'),
+(21, 'usuario16', 'senha678'),
+(22, 'usuario17', 'senha789'),
+(23, 'usuario18', 'senha890'),
+(24, 'usuario19', 'senha901'),
+(25, 'usuario20', 'senha012'),
+(26, 'usuario21', 'senha123'),
+(27, 'usuario22', 'senha234'),
+(28, 'usuario23', 'senha345'),
+(29, 'usuario24', 'senha456'),
+(30, 'usuario25', 'senha567'),
+(31, 'usuario26', 'senha678'),
+(32, 'usuario27', 'senha789'),
+(33, 'usuario28', 'senha890'),
+(34, 'usuario29', 'senha901'),
+(35, 'usuario30', 'senha012'),
+(36, 'usuario31', 'senha123'),
+(37, 'usuario32', 'senha234'),
+(38, 'usuario33', 'senha345'),
+(39, 'usuario34', 'senha456'),
+(40, 'usuario35', 'senha567'),
+(41, 'usuario36', 'senha678'),
+(42, 'usuario37', 'senha789'),
+(43, 'usuario38', 'senha890'),
+(44, 'usuario39', 'senha901'),
+(45, 'usuario40', 'senha012'),
+(46, 'usuario41', 'senha123'),
+(47, 'usuario42', 'senha234'),
+(48, 'usuario43', 'senha345'),
+(49, 'usuario44', 'senha456'),
+(50, 'usuario45', 'senha567'),
+(51, 'usuario46', 'senha678'),
+(52, 'usuario47', 'senha789'),
+(53, 'usuario48', 'senha890'),
+(54, 'usuario49', 'senha901'),
+(55, 'usuario50', 'senha012'),
+(156, 'Lucas', 'senha123'),
+(157, 'Maria', 'senha234'),
+(158, 'João', 'senha345'),
+(159, 'Ana', 'senha456'),
+(160, 'Carlos', 'senha567'),
+(161, 'Fernanda', 'senha678'),
+(162, 'Pedro', 'senha789'),
+(163, 'Juliana', 'senha890'),
+(164, 'Paulo', 'senha901'),
+(165, 'Beatriz', 'senha012'),
+(166, 'Rafael', 'senha123'),
+(167, 'Camila', 'senha234'),
+(168, 'Roberto', 'senha345'),
+(169, 'Isabela', 'senha456'),
+(170, 'Gustavo', 'senha567'),
+(171, 'Larissa', 'senha678'),
+(172, 'Diego', 'senha789'),
+(173, 'Mariana', 'senha890'),
+(174, 'Felipe', 'senha901'),
+(175, 'Tatiane', 'senha012'),
+(176, 'Ricardo', 'senha123'),
+(177, 'Simone', 'senha234'),
+(178, 'Vitor', 'senha345'),
+(179, 'Carla', 'senha456'),
+(180, 'Vinícius', 'senha567'),
+(181, 'Raquel', 'senha678'),
+(182, 'Eduardo', 'senha789'),
+(183, 'Juliana', 'senha890'),
+(184, 'Fábio', 'senha901'),
+(185, 'Sofia', 'senha012'),
+(186, 'Marcelo', 'senha123'),
+(187, 'Larissa', 'senha234'),
+(188, 'Alexandre', 'senha345'),
+(189, 'Gabriela', 'senha456'),
+(190, 'Thiago', 'senha567'),
+(191, 'Priscila', 'senha678'),
+(192, 'Maurício', 'senha789'),
+(193, 'Renata', 'senha890'),
+(194, 'Gustavo', 'senha901'),
+(195, 'Cláudia', 'senha012'),
+(196, 'Paula', 'senha123'),
+(197, 'Mário', 'senha234'),
+(198, 'Carolina', 'senha345'),
+(199, 'André', 'senha456'),
+(200, 'Tatiane', 'senha567'),
+(201, 'Bruna', 'senha678'),
+(202, 'Ricardo', 'senha789'),
+(203, 'Eduarda', 'senha890'),
+(204, 'Felipe', 'senha901'),
+(205, 'Jéssica', 'senha012'),
+(206, 'Adriana', 'senha123'),
+(207, 'Fernando', 'senha234'),
+(208, 'Marcelo', 'senha345'),
+(209, 'Letícia', 'senha456'),
+(210, 'Ricardo', 'senha567'),
+(211, 'Roberta', 'senha678'),
+(212, 'Fábio', 'senha789'),
+(213, 'Lúcia', 'senha890'),
+(214, 'Walter', 'senha901'),
+(215, 'Juliana', 'senha012'),
+(216, 'Gustavo', 'senha123'),
+(217, 'Ana', 'senha234'),
+(218, 'João', 'senha345'),
+(219, 'Carlos', 'senha456'),
+(220, 'Luciana', 'senha567'),
+(221, 'Felipe', 'senha678'),
+(222, 'Simone', 'senha789'),
+(223, 'Tatiane', 'senha890'),
+(224, 'Aline', 'senha901'),
+(225, 'Rogério', 'senha012'),
+(226, 'Marcos', 'senha123'),
+(227, 'Vanessa', 'senha234'),
+(228, 'Denise', 'senha345'),
+(229, 'Paula', 'senha456'),
+(230, 'Ricardo', 'senha567'),
+(231, 'Renata', 'senha678'),
+(232, 'Cristina', 'senha789'),
+(233, 'José', 'senha890'),
+(234, 'Sílvia', 'senha901'),
+(235, 'Mário', 'senha012'),
+(236, 'Mariana', 'senha123'),
+(237, 'Gabriela', 'senha234'),
+(238, 'Bruna', 'senha345'),
+(239, 'Eduardo', 'senha456'),
+(240, 'Catarina', 'senha567'),
+(241, 'Alexandre', 'senha678'),
+(242, 'Michele', 'senha789'),
+(243, 'Felipe', 'senha890'),
+(244, 'Thais', 'senha901'),
+(245, 'Beatriz', 'senha012'),
+(246, 'Arthur', 'senha123'),
+(247, 'Leonardo', 'senha234'),
+(248, 'Luana', 'senha345'),
+(249, 'Sérgio', 'senha456'),
+(250, 'Carlos', 'senha567'),
+(251, 'Joana', 'senha678'),
+(252, 'Douglas', 'senha789'),
+(253, 'Daniela', 'senha890'),
+(254, 'Gustavo', 'senha901'),
+(255, 'Jorge', 'senha012'),
+(256, 'Patrícia', 'senha123'),
+(257, 'Marcelo', 'senha234'),
+(258, 'Marina', 'senha345'),
+(259, 'Eduardo', 'senha456'),
+(260, 'Bruna', 'senha567'),
+(261, 'Gabriel', 'senha678'),
+(262, 'Tânia', 'senha789'),
+(263, 'Célia', 'senha890'),
+(264, 'Daniel', 'senha901'),
+(265, 'André', 'senha012'),
+(266, 'Fátima', 'senha123'),
+(267, 'Vera', 'senha234'),
+(268, 'Isabel', 'senha345'),
+(269, 'Hugo', 'senha456'),
+(270, 'Tânia', 'senha567'),
+(271, 'Karine', 'senha678'),
+(272, 'Paulo', 'senha789'),
+(273, 'Aline', 'senha890'),
+(274, 'Diego', 'senha901'),
+(275, 'Nadia', 'senha012'),
+(276, 'Gustavo', 'senha123'),
+(277, 'Roberta', 'senha234'),
+(278, 'João', 'senha345'),
+(279, 'Carla', 'senha456'),
+(280, 'Fernando', 'senha567'),
+(281, 'Bruna', 'senha678'),
+(282, 'Nina', 'senha789'),
+(283, 'Rafael', 'senha890'),
+(284, 'Ricardo', 'senha901'),
+(285, 'Marcos', 'senha012'),
+(286, 'Juliana', 'senha123'),
+(287, 'Vanessa', 'senha234'),
+(288, 'Carolina', 'senha345'),
+(289, 'Humberto', 'senha456'),
+(290, 'Sandra', 'senha567'),
+(291, 'Daniel', 'senha678'),
+(292, 'Cícero', 'senha789'),
+(293, 'Felipe', 'senha890'),
+(294, 'Paula', 'senha901'),
+(295, 'Maria', 'senha012'),
+(296, 'Alessandra', 'senha123'),
+(297, 'Rodrigo', 'senha234'),
+(298, 'Maurício', 'senha345'),
+(299, 'Tatiane', 'senha456'),
+(300, 'Marcelo', 'senha567'),
+(301, 'Silvia', 'senha678'),
+(302, 'Gustavo', 'senha789'),
+(303, 'Rogério', 'senha890'),
+(304, 'Paula', 'senha901'),
+(305, 'Claudia', 'senha012'),
+(306, 'Luiz', 'senha123'),
+(307, 'Eliane', 'senha234'),
+(308, 'Thiago', 'senha345'),
+(309, 'Valéria', 'senha456'),
+(310, 'Vitor', 'senha567'),
+(311, 'Denise', 'senha678'),
+(312, 'Aline', 'senha789'),
+(313, 'Mauricio', 'senha890'),
+(314, 'Joaquim', 'senha901'),
+(315, 'Jessica', 'senha012'),
+(316, 'Felipe', 'senha123'),
+(317, 'Cássia', 'senha234'),
+(318, 'Isis', 'senha345'),
+(319, 'Gabriel', 'senha456'),
+(320, 'Leonardo', 'senha567'),
+(321, 'Cristiane', 'senha678'),
+(322, 'Juliana', 'senha789'),
+(323, 'Marcia', 'senha890'),
+(324, 'Rodrigo', 'senha901'),
+(325, 'Bárbara', 'senha012'),
+(326, 'César', 'senha123'),
+(327, 'Rafaela', 'senha234'),
+(328, 'Cláudio', 'senha345'),
+(329, 'Tamires', 'senha456'),
+(330, 'Nathalia', 'senha567'),
+(331, 'Francisco', 'senha678'),
+(332, 'Silvia', 'senha789'),
+(333, 'Luana', 'senha890'),
+(334, 'Alessandra', 'senha901'),
+(335, 'Bruna', 'senha012'),
+(336, 'Raul', 'senha123'),
+(337, 'Kátia', 'senha234'),
+(338, 'Gustavo', 'senha345'),
+(339, 'Renata', 'senha456'),
+(340, 'Robson', 'senha567'),
+(341, 'Cristina', 'senha678'),
+(342, 'Felipe', 'senha789'),
+(343, 'Larissa', 'senha890'),
+(344, 'Patrícia', 'senha901'),
+(345, 'Vivi', 'senha012'),
+(346, 'Jorge', 'senha123'),
+(347, 'Ricardo', 'senha234'),
+(348, 'Marcelo', 'senha345'),
+(349, 'Felipe', 'senha456'),
+(350, 'Fábio', 'senha567'),
+(351, 'Rafael', 'senha678'),
+(352, 'Adriana', 'senha789'),
+(353, 'Gabriela', 'senha890'),
+(354, 'Larissa', 'senha901');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `tb_clientes`
+--
+ALTER TABLE `tb_clientes`
+  ADD PRIMARY KEY (`cpf_cliente`);
+
+--
+-- Indexes for table `tb_usuarios`
+--
+ALTER TABLE `tb_usuarios`
+  ADD PRIMARY KEY (`id_usuario`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `tb_usuarios`
+--
+ALTER TABLE `tb_usuarios`
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=355;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
